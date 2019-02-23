@@ -13,3 +13,5 @@ end
 require 'MiniTest/pride'
 require 'MiniTest/autorun'
 require 'pry'
+require './lib/enigma'
+require 'date'
