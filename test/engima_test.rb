@@ -9,16 +9,18 @@ class EnigmaTest < MiniTest::Test
   end
 
   def test_enigma_can_encrypt_with_key_and_date
+    skip
     enigma = Enigma.new
     expected = {
       encryption: "keder ohulw",
       key: "02715",
       date: "040895"
     }
-    assert_equal expected, enigma.decrypt("keder ohulw", "02715", "040895")
+    assert_equal expected, enigma.encrypt("hello world", "02715", "040895")
   end
 
   def test_engigma_can_decrypt_with_key_and_date
+    skip
     enigma = Enigma.new
     expected = {
       decryption: "hello world",
@@ -29,6 +31,7 @@ class EnigmaTest < MiniTest::Test
   end
 
   def test_enigma_can_encrypt_with_key_plus_todays_date
+    skip
     enigma = Enigma.new
     expected = {
 
@@ -37,6 +40,7 @@ class EnigmaTest < MiniTest::Test
   end
 
   def test_engigma_can_decrypt_with_key_plus_todays_date
+    skip
     enigma = Enigma.new
     expected = {
 
@@ -44,4 +48,12 @@ class EnigmaTest < MiniTest::Test
     assert_equal expected, enigma.decrypt(encrypted[:encryption], "02715")
   end
 
-  
+  def test_enigma_can_encrypt_with_random_key_plus_todays_date
+    skip
+    enigma = Enigma.new
+    expected = {
+
+    }
+    assert_equal expected, enigma.encrypt("hello world")
+  end
+end
