@@ -1,6 +1,7 @@
 require './test/test_helper'
 
 
+
 class EnigmaTest < MiniTest::Test
 
   def test_it_exists
@@ -9,13 +10,14 @@ class EnigmaTest < MiniTest::Test
   end
 
   def test_enigma_can_encrypt_with_key_and_date
+    skip
     enigma = Enigma.new
     expected = {
       encryption: "keder ohulw",
       key: "02715",
       date: "040895"
     }
-    assert_equal expected, enigma.encrypt("hello world", "02715")
+    assert_equal expected, enigma.encrypt("hello world", "02715", "040895")
   end
 
   def test_engigma_can_decrypt_with_key_and_date
@@ -33,7 +35,7 @@ class EnigmaTest < MiniTest::Test
     skip
     enigma = Enigma.new
     expected = {
-
+      :encryption=>"hello world", :key=>"02715", :date=> "jj"
     }
     assert_equal expected, enigma.encrypt("hello world", "02715")
   end
@@ -55,4 +57,11 @@ class EnigmaTest < MiniTest::Test
     }
     assert_equal expected, enigma.encrypt("hello world")
   end
+
+  def test_enigma_knows_todays_date
+    enigma = Enigma.new
+    Date.today.strftime('%m%d%y')
+    assert_equal Date.today.strftime('%m%d%y'), enigma.todays_date
+  end
+
 end
