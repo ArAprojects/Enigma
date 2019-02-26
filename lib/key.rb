@@ -1,4 +1,3 @@
-class Key
-  def initialize
-  end
+
+module Key
 end
