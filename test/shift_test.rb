@@ -8,4 +8,10 @@ class ShiftTest < MiniTest::Test
     assert_instance_of Shift, shift
   end
 
-end
+  def test_shift_has_an_empty_hash
+    shift = Shift.new
+    expected = {}
+    assert_equal expected, shift.hash
+  end
+
+  
