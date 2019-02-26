@@ -60,8 +60,8 @@ class EnigmaTest < MiniTest::Test
 
   def test_enigma_knows_todays_date
     enigma = Enigma.new
-    Date.today.strftime('%m%d%y')
-    assert_equal Date.today.strftime('%m%d%y'), enigma.todays_date
+    Date.today.strftime('%d%m%y')
+    assert_equal Date.today.strftime('%d%m%y'), enigma.todays_date
   end
 
 end
