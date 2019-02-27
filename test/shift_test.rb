@@ -25,8 +25,14 @@ class ShiftTest < MiniTest::Test
 
   def test_can_can_we_shift_character_set
     enigma = Enigma.new
-    assert_equal "asd", enigma.shift("a", 4)
+    assert_equal "e", enigma.shift("a", 4)
   end
+
+  def test_shifted_works
+    enigma = Enigma.new
+    assert_equal "e", enigma.shifted("aerer")
+  end
+
 
 
 

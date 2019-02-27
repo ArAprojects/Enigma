@@ -25,21 +25,30 @@ module Shift
     shifts << shift_d
   end
 
+def split_message(message)
+  message.chars.slice(4).to_a
+end
+
+ def message_array
+
+
   def shift(letter, number)
     shifter = @character_set.index(letter) + number
-    if @character_set.index(letter) = nil
+    if @character_set.index(letter).nil?
       letter
     else
      @character_set.rotate(shifter).first
   end
 end
 
-
-
-  def shifted(message, shift)
-    message_shift = message.downcase.split("").map do |char|
-      char.shift
+  def shifted(split_message)
+    message_shift = shift_array.map do |element|
+      message.downcase.split("").map do |char|
+        self.shift(char, element)
+        shift_array.rotate
+      end
     end
     message_shift
+    binding.pry
   end
 end
