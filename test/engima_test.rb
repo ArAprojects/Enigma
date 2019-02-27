@@ -34,7 +34,7 @@ class EnigmaTest < MiniTest::Test
     skip
     enigma = Enigma.new
     expected = {
-      :encryption=>"hello world", :key=>"02715", :date=> "jj"
+      :encryption=>"hello world", :key=>"02715", :date=> enigma.todays_date
     }
     assert_equal expected, enigma.encrypt("hello world", "02715")
   end
