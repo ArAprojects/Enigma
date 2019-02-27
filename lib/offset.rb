@@ -8,6 +8,16 @@ module Offset
     todays_date_squared.to_s[-4]
   end
 
+  def offset_b
+    todays_date_squared.to_s[-3]
+  end
 
+  def offset_c
+    todays_date_squared.to_s[-2]
+  end
+
+  def offset_d
+    todays_date_squared.to_s[-1]
+  end
 
 end
