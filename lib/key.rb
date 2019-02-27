@@ -21,4 +21,6 @@ module Key
     random_number[4..5].to_i
   end
 
+  
+
 end
