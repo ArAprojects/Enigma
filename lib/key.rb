@@ -13,4 +13,12 @@ module Key
     random_number[2..3].to_i
   end
 
+  def c_key
+    random_number[3..4].to_i
+  end
+
+
+
+
+
 end

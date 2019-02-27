@@ -24,7 +24,9 @@ class KeyTest < MiniTest::Test
     assert_equal key[2..3].to_i, enigma.b_key
   end
 
-  
-
-
+  def test_C_key
+    enigma = Enigma.new
+    key = enigma.random_number
+    assert_equal key[3..4].to_i, enigma.c_key
+  end
 end
