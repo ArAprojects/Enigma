@@ -29,4 +29,11 @@ class KeyTest < MiniTest::Test
     key = enigma.random_number
     assert_equal key[3..4].to_i, enigma.c_key
   end
+
+  def test_D_key
+    enigma = Enigma.new
+    key = enigma.random_number
+    assert_equal key[4..5].to_i, enigma.d_key
+  end
+
 end

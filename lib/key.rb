@@ -17,8 +17,8 @@ module Key
     random_number[3..4].to_i
   end
 
-
-
-
+  def d_key
+    random_number[4..5].to_i
+  end
 
 end
