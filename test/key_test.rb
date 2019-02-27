@@ -12,4 +12,10 @@ class KeyTest < MiniTest::Test
     assert String, enigma.random_key
   end
 
+  def test_A_key
+    enigma = Enigma.new
+    key = enigma.random_key
+    assert_equal key(0..1), enigma.a_key
+  end
+
 end
